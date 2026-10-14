@@ -1,0 +1,7 @@
+vendor/*
+tools/baseline/*
+
+# Self-analysis generated files
+tools/self-analysis/baseline/**
+tools/self-analysis/reports/**
+tools/self-analysis/temp/**

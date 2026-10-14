@@ -1,0 +1,279 @@
+#!/usr/bin/env php
+<?php declare(strict_types=1);
+
+/**
+ * phparchitector - PHP Architecture Validator
+ * 
+ * A tool for validating PHP codebase architecture against defined rules.
+ * Performs self-analysis using baseline analyzers.
+ * 
+ * Usage:
+ *   phparchitector                    # Analyze ./src directory
+ *   phparchitector /path/to/project   # Analyze specific directory
+ *   phparchitector --help             # Show help
+ *   phparchitector --version          # Show version
+ * 
+ * When installed via Composer:
+ *   ./vendor/bin/phparchitector
+ * 
+ * @package phparchitector
+ * @license MIT
+ */
+
+// Define constants
+define('PHPARCHITECTOR_VERSION', '1.0.0');
+define('PHPARCHITECTOR_NAME', 'phparchitector');
+
+// Set up error handling
+set_error_handler(function ($severity, $message, $file, $line) {
+    if (!(error_reporting() & $severity)) {
+        return false;
+    }
+    throw new ErrorException($message, 0, $severity, $file, $line);
+});
+
+// Parse command line arguments
+$options = getopt('', ['help', 'version', 'target:', 'output:', 'json', 'quiet']);
+$arguments = array_slice($argv, 1);
+
+// Show help
+if (isset($options['help']) || in_array('-h', $arguments, true) || in_array('--help', $arguments, true)) {
+    showHelp();
+    exit(0);
+}
+
+// Show version
+if (isset($options['version']) || in_array('-v', $arguments, true) || in_array('--version', $arguments, true)) {
+    echo PHPARCHITECTOR_NAME . ' version ' . PHPARCHITECTOR_VERSION . "\n";
+    exit(0);
+}
+
+// Determine target directory
+$target = determineTarget($arguments, $options);
+if ($target === null) {
+    echo "Error: Could not determine target directory.\n";
+    showHelp();
+    exit(1);
+}
+
+// Determine output directory
+$output = determineOutput($options);
+
+// Find the tool directory
+$toolDir = findToolDirectory();
+if ($toolDir === null) {
+    echo "Error: Could not find self-analysis tools.\n";
+    exit(1);
+}
+
+// Run the analysis
+$success = runAnalysis($toolDir, $target, $output, $options);
+
+// Exit with appropriate code
+exit($success ? 0 : 1);
+
+// ========================================================================
+// FUNCTIONS
+// ========================================================================
+
+/**
+ * Show help message
+ */
+function showHelp(): void
+{
+    echo "Usage: phparchitector [OPTIONS] [TARGET]\n\n";
+    echo "PHP Architecture Validator - Validates codebase architecture against defined rules.\n\n";
+    echo "Arguments:\n";
+    echo "  TARGET                    Directory to analyze (default: ./src)\n";
+    echo "\nOptions:\n";
+    echo "  --help, -h               Show this help message\n";
+    echo "  --version, -v            Show version information\n";
+    echo "  --target=TARGET          Directory to analyze\n";
+    echo "  --output=DIR             Output directory for reports (default: tools/self-analysis/reports/)\n";
+    echo "  --json                   Output JSON only (no markdown reports)\n";
+    echo "  --quiet, -q              Suppress output (exit code only)\n";
+    echo "\nExamples:\n";
+    echo "  phparchitector                          # Analyze ./src directory\n";
+    echo "  phparchitector /path/to/project         # Analyze specific project\n";
+    echo "  phparchitector --output=./custom-reports  # Custom output directory\n";
+    echo "  phparchitector --quiet                   # Run silently\n";
+}
+
+/**
+ * Determine target directory from arguments or options
+ */
+function determineTarget(array $arguments, array $options): ?string
+{
+    // Check --target option first
+    if (isset($options['target'])) {
+        $target = $options['target'];
+        if (is_dir($target)) {
+            return realpath($target);
+        }
+        echo "Error: Target directory does not exist: {$target}\n";
+        return null;
+    }
+    
+    // Check positional argument
+    foreach ($arguments as $arg) {
+        if ($arg[0] !== '-' && is_dir($arg)) {
+            return realpath($arg);
+        }
+    }
+    
+    // Default to ./src
+    $defaultTarget = getcwd() . '/src';
+    if (is_dir($defaultTarget)) {
+        return realpath($defaultTarget);
+    }
+    
+    // Fall back to current directory
+    return getcwd();
+}
+
+/**
+ * Determine output directory from options
+ */
+function determineOutput(array $options): string
+{
+    if (isset($options['output'])) {
+        $output = $options['output'];
+        if (!is_dir($output)) {
+            if (!mkdir($output, 0755, true)) {
+                echo "Error: Could not create output directory: {$output}\n";
+                exit(1);
+            }
+        }
+        return realpath($output);
+    }
+    
+    // Default to tools/self-analysis/reports
+    $defaultOutput = getcwd() . '/tools/self-analysis/reports';
+    if (!is_dir($defaultOutput)) {
+        if (!mkdir($defaultOutput, 0755, true)) {
+            echo "Error: Could not create output directory: {$defaultOutput}\n";
+            exit(1);
+        }
+    }
+    return $defaultOutput;
+}
+
+/**
+ * Find the tool directory containing the self-analysis scripts
+ */
+function findToolDirectory(): ?string
+{
+    $toolPaths = [
+        __DIR__ . '/../tools/self-analysis',  // Installed via Composer
+        __DIR__ . '/../../tools/self-analysis', // In development (composer install)
+        getcwd() . '/tools/self-analysis',      // Current project
+    ];
+    
+    foreach ($toolPaths as $path) {
+        if (is_dir($path) && file_exists($path . '/run-analysis.php')) {
+            return realpath($path);
+        }
+    }
+    
+    return null;
+}
+
+/**
+ * Run the analysis
+ */
+function runAnalysis(string $toolDir, string $target, string $output, array $options): bool
+{
+    $quiet = isset($options['quiet']) || isset($options['q']);
+    $jsonOnly = isset($options['json']);
+    
+    if (!$quiet) {
+        echo "PHP Architecture Validator\n";
+        echo "===========================\n\n";
+        echo "Target: " . $target . "\n";
+        echo "Output: " . $output . "\n\n";
+    }
+    
+    // Save current directory
+    $originalDir = getcwd();
+    
+    try {
+        // Build commands
+        $analysisCmd = 'php ' . escapeshellarg($toolDir . '/run-analysis.php') .
+                       ' --target=' . escapeshellarg($target) .
+                       ' --output=' . escapeshellarg($output);
+        
+        if (!$quiet) {
+            echo "Running analysis...\n";
+        }
+        
+        $exitCode = runCommand($analysisCmd, $quiet);
+        
+        if ($exitCode !== 0) {
+            if (!$quiet) {
+                echo "\n❌ Analysis failed with exit code: {$exitCode}\n";
+            }
+            return false;
+        }
+        
+        // Generate reports (unless JSON only)
+        if (!$jsonOnly) {
+            if (!$quiet) {
+                echo "\nGenerating reports...\n";
+            }
+            
+            $reportCmd = 'php ' . escapeshellarg($toolDir . '/generate-report.php') .
+                        ' --output=' . escapeshellarg($output);
+            
+            $exitCode = runCommand($reportCmd, $quiet);
+            
+            if ($exitCode !== 0) {
+                if (!$quiet) {
+                    echo "\n❌ Report generation failed with exit code: {$exitCode}\n";
+                }
+                return false;
+            }
+        }
+        
+        if (!$quiet) {
+            echo "\n✅ Analysis complete!\n";
+            if (!$jsonOnly) {
+                echo "Reports saved to: " . $output . "\n";
+                
+                // Show summary if available
+                $summaryFile = $output . '/summary.md';
+                if (file_exists($summaryFile)) {
+                    $summary = file_get_contents($summaryFile);
+                    if (preg_match('/## Overall Score: \*\*(.+?)\*\*/', $summary, $matches)) {
+                        echo "Score: " . $matches[1] . "\n";
+                    }
+                }
+            }
+        }
+        
+        return true;
+        
+    } catch (Throwable $e) {
+        if (!$quiet) {
+            echo "\n❌ Error: " . $e->getMessage() . "\n";
+        }
+        return false;
+    } finally {
+        chdir($originalDir);
+    }
+}
+
+/**
+ * Run a command and return its exit code
+ */
+function runCommand(string $command, bool $quiet): int
+{
+    if ($quiet) {
+        // Suppress all output
+        exec($command . ' > /dev/null 2>&1', $output, $exitCode);
+    } else {
+        // Show output in real-time
+        passthru($command, $exitCode);
+    }
+    
+    return $exitCode;
+}

@@ -1,0 +1,3092 @@
+{
+    "timestamp": "2026-10-14 21:51:07",
+    "config": {
+        "baseline_path": "\/home\/alex\/workspace\/lossless-analysis\/tools\/self-analysis\/baseline",
+        "target_path": "\/home\/alex\/workspace\/lossless-analysis\/src",
+        "excludes": [
+            "tests\/",
+            "vendor\/",
+            "tools\/"
+        ],
+        "analyzers": [
+            "ClassAnalyzer",
+            "DependencyAnalyzer",
+            "PatternDetector"
+        ],
+        "output_dir": "\/home\/alex\/workspace\/lossless-analysis\/tools\/self-analysis\/reports",
+        "temp_dir": "\/home\/alex\/workspace\/lossless-analysis\/tools\/self-analysis\/temp",
+        "cleanup_temp": true,
+        "verbosity": 1
+    },
+    "analyzers": {
+        "classAnalyzer": {
+            "status": "success",
+            "results": {
+                "files_analyzed": 39,
+                "classes": [
+                    {
+                        "namespace": "App\\Analyzer\\Dependency",
+                        "class_name": "DependencyVisitor",
+                        "extends": "AstVisitor",
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractFromFile",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "enter",
+                                "visibility": "protected",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "processClass",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "processInterface",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "processMembers",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "processMethod",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "processProperty",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "processTypeNode",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "processNodeForDependencies",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getDependencies",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getClasses",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "$resolver",
+                                "visibility": "private",
+                                "is_static": false
+                            },
+                            {
+                                "name": "$namespace",
+                                "visibility": "private",
+                                "is_static": false
+                            },
+                            {
+                                "name": "$useStatements",
+                                "visibility": "private",
+                                "is_static": false
+                            },
+                            {
+                                "name": "$currentNamespace",
+                                "visibility": "private",
+                                "is_static": false
+                            },
+                            {
+                                "name": "$dependencies",
+                                "visibility": "private",
+                                "is_static": false
+                            },
+                            {
+                                "name": "$classes",
+                                "visibility": "private",
+                                "is_static": false
+                            }
+                        ],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 329,
+                        "fqcn": "App\\Analyzer\\Dependency\\DependencyVisitor",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/DependencyVisitor.php"
+                    },
+                    {
+                        "namespace": "App\\Analyzer\\Dependency",
+                        "class_name": "DependencyExtractor",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractFromFile",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractFromFileLegacy",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractClassWithDeps",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractInterfaceWithDeps",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractMemberDependencies",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractTypeDependencies",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractExpressionDependencies",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "$resolver",
+                                "visibility": "private",
+                                "is_static": false
+                            }
+                        ],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 372,
+                        "fqcn": "App\\Analyzer\\Dependency\\DependencyExtractor",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/DependencyExtractor.php"
+                    },
+                    {
+                        "namespace": "App\\Analyzer\\Dependency",
+                        "class_name": "CircularDependencyDetector",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "findCircularDependencies",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "normalizeCycle",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "findCyclesDfs",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 147,
+                        "fqcn": "App\\Analyzer\\Dependency\\CircularDependencyDetector",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/CircularDependencyDetector.php"
+                    },
+                    {
+                        "namespace": "App\\Analyzer\\Dependency",
+                        "class_name": "DependencyResolver",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "resolve",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "isPrimitiveType",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractClassName",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractNamespace",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractClassNameFromFqcn",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [
+                            {
+                                "name": "PRIMITIVE_TYPES",
+                                "visibility": "private"
+                            }
+                        ],
+                        "dependencies": [],
+                        "lines_of_code": 129,
+                        "fqcn": "App\\Analyzer\\Dependency\\DependencyResolver",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/DependencyResolver.php"
+                    },
+                    {
+                        "namespace": "App\\Analyzer\\Dependency",
+                        "class_name": "DependencyGraphBuilder",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "buildFromDirectory",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "buildFromFile",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "$extractor",
+                                "visibility": "private",
+                                "is_static": false
+                            }
+                        ],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 146,
+                        "fqcn": "App\\Analyzer\\Dependency\\DependencyGraphBuilder",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/DependencyGraphBuilder.php"
+                    },
+                    {
+                        "namespace": "App\\Analyzer\\Pattern",
+                        "class_name": "AntiPatternDetector",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "setConfig",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getConfig",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "detect",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "$config",
+                                "visibility": "private",
+                                "is_static": false
+                            }
+                        ],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 167,
+                        "fqcn": "App\\Analyzer\\Pattern\\AntiPatternDetector",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/AntiPatternDetector.php"
+                    },
+                    {
+                        "namespace": "App\\Analyzer\\Pattern",
+                        "class_name": "ClassInfoExtractor",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "extract",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractClassMembers",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractMethodInfo",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractPropertyInfo",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "countInstantiations",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getVisibility",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 164,
+                        "fqcn": "App\\Analyzer\\Pattern\\ClassInfoExtractor",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/ClassInfoExtractor.php"
+                    },
+                    {
+                        "namespace": "App\\Analyzer\\Pattern",
+                        "class_name": "LayerViolationDetector",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "detectLayerViolations",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractLayer",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 131,
+                        "fqcn": "App\\Analyzer\\Pattern\\LayerViolationDetector",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/LayerViolationDetector.php"
+                    },
+                    {
+                        "namespace": "App\\Analyzer\\Pattern",
+                        "class_name": "DirectoryPatternAnalyzer",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "setPatternConfig",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getPatternConfig",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "analyzeDirectory",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "analyzeFile",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "detectDirectoryLevelPatterns",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "$classPatternAnalyzer",
+                                "visibility": "private",
+                                "is_static": false
+                            },
+                            {
+                                "name": "$layerViolationDetector",
+                                "visibility": "private",
+                                "is_static": false
+                            }
+                        ],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 156,
+                        "fqcn": "App\\Analyzer\\Pattern\\DirectoryPatternAnalyzer",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/DirectoryPatternAnalyzer.php"
+                    },
+                    {
+                        "namespace": "App\\Analyzer\\Pattern",
+                        "class_name": "DesignPatternDetector",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "setPatternConfig",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getPatternConfig",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "detect",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "hasMethodsMatchingPattern",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "$patternConfig",
+                                "visibility": "private",
+                                "is_static": false
+                            }
+                        ],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 182,
+                        "fqcn": "App\\Analyzer\\Pattern\\DesignPatternDetector",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/DesignPatternDetector.php"
+                    },
+                    {
+                        "namespace": "App\\Analyzer\\Pattern",
+                        "class_name": "ClassPatternAnalyzer",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "setPatternConfig",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getPatternConfig",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "analyzeClass",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "$extractor",
+                                "visibility": "private",
+                                "is_static": false
+                            },
+                            {
+                                "name": "$patternDetector",
+                                "visibility": "private",
+                                "is_static": false
+                            },
+                            {
+                                "name": "$antiPatternDetector",
+                                "visibility": "private",
+                                "is_static": false
+                            }
+                        ],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 81,
+                        "fqcn": "App\\Analyzer\\Pattern\\ClassPatternAnalyzer",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/ClassPatternAnalyzer.php"
+                    },
+                    {
+                        "namespace": "App\\Analyzer",
+                        "class_name": "AbstractAnalyzer",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "parse",
+                                "visibility": "protected",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "parseFile",
+                                "visibility": "protected",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "findPhpFiles",
+                                "visibility": "protected",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getParser",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "$parser",
+                                "visibility": "protected",
+                                "is_static": false
+                            }
+                        ],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 73,
+                        "fqcn": "App\\Analyzer\\AbstractAnalyzer",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/AbstractAnalyzer.php"
+                    },
+                    {
+                        "namespace": "App\\Analyzer",
+                        "class_name": "ClassInfoVisitor",
+                        "extends": "AstVisitor",
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "extractFromFile",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "enter",
+                                "visibility": "protected",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractClassInfo",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractMethods",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractProperties",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractConstants",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getVisibility",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "$namespace",
+                                "visibility": "private",
+                                "is_static": false
+                            },
+                            {
+                                "name": "$classNode",
+                                "visibility": "private",
+                                "is_static": false
+                            },
+                            {
+                                "name": "$useStatements",
+                                "visibility": "private",
+                                "is_static": false
+                            },
+                            {
+                                "name": "$filePath",
+                                "visibility": "private",
+                                "is_static": false
+                            }
+                        ],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 238,
+                        "fqcn": "App\\Analyzer\\ClassInfoVisitor",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/ClassInfoVisitor.php"
+                    },
+                    {
+                        "namespace": "App\\Analyzer",
+                        "class_name": "PatternDetector",
+                        "extends": "AbstractAnalyzer",
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "setPatternConfig",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "analyzeDirectory",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "analyzeFile",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "analyzeClass",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "detectDirectoryLevelPatterns",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getPatternConfig",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "$dependencyAnalyzer",
+                                "visibility": "private",
+                                "is_static": false
+                            },
+                            {
+                                "name": "$directoryPatternAnalyzer",
+                                "visibility": "private",
+                                "is_static": false
+                            }
+                        ],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 171,
+                        "fqcn": "App\\Analyzer\\PatternDetector",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/PatternDetector.php"
+                    },
+                    {
+                        "namespace": "App\\Analyzer",
+                        "class_name": "DependencyAnalyzer",
+                        "extends": "AbstractAnalyzer",
+                        "implements": [
+                            "DependencyAnalyzerInterface"
+                        ],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "analyze",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "analyzeFile",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "analyzeDirectory",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "buildGraph",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getDependencies",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "findCircularDependencies",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [
+                            {
+                                "name": "$extractor",
+                                "visibility": "private",
+                                "is_static": false
+                            },
+                            {
+                                "name": "$graphBuilder",
+                                "visibility": "private",
+                                "is_static": false
+                            },
+                            {
+                                "name": "$circularDetector",
+                                "visibility": "private",
+                                "is_static": false
+                            },
+                            {
+                                "name": "$resolver",
+                                "visibility": "private",
+                                "is_static": false
+                            }
+                        ],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 142,
+                        "fqcn": "App\\Analyzer\\DependencyAnalyzer",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/DependencyAnalyzer.php"
+                    },
+                    {
+                        "namespace": "App\\Analyzer",
+                        "class_name": "ClassAnalyzer",
+                        "extends": "AbstractAnalyzer",
+                        "implements": [
+                            "AnalyzerInterface"
+                        ],
+                        "methods": [
+                            {
+                                "name": "analyze",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "analyzeFile",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "analyzeDirectory",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "analyzeAsDto",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "analyzeFileAsDto",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractClassInfoFromFile",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractMethodsFromClass",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractPropertiesFromClass",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractConstantsFromClass",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractTypeFromTypeNode",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getVisibility",
+                                "visibility": "private",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 352,
+                        "fqcn": "App\\Analyzer\\ClassAnalyzer",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/ClassAnalyzer.php"
+                    },
+                    {
+                        "namespace": "App\\Model",
+                        "class_name": "MethodInfo",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "toArray",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 47,
+                        "fqcn": "App\\Model\\MethodInfo",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/MethodInfo.php"
+                    },
+                    {
+                        "namespace": "App\\Model",
+                        "class_name": "PatternThresholds",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "toArray",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 38,
+                        "fqcn": "App\\Model\\PatternThresholds",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/PatternThresholds.php"
+                    },
+                    {
+                        "namespace": "App\\Model\\Graph",
+                        "class_name": "Node",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getId",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "toArray",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 43,
+                        "fqcn": "App\\Model\\Graph\\Node",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/Graph\/Node.php"
+                    },
+                    {
+                        "namespace": "App\\Model\\Graph",
+                        "class_name": "DependencyGraph",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "addNode",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "addEdge",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "hasNode",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getNode",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getNodes",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getEdges",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getDependencies",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getDependents",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "toArray",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 138,
+                        "fqcn": "App\\Model\\Graph\\DependencyGraph",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/Graph\/DependencyGraph.php"
+                    },
+                    {
+                        "namespace": "App\\Model\\Graph",
+                        "class_name": "Edge",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getId",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "toArray",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 45,
+                        "fqcn": "App\\Model\\Graph\\Edge",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/Graph\/Edge.php"
+                    },
+                    {
+                        "namespace": "App\\Model",
+                        "class_name": "DependencyInfo",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "toArray",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 38,
+                        "fqcn": "App\\Model\\DependencyInfo",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/DependencyInfo.php"
+                    },
+                    {
+                        "namespace": "App\\Model",
+                        "class_name": "LayerConfig",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "toArray",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 32,
+                        "fqcn": "App\\Model\\LayerConfig",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/LayerConfig.php"
+                    },
+                    {
+                        "namespace": "App\\Model",
+                        "class_name": "PatternFinding",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "toArray",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 44,
+                        "fqcn": "App\\Model\\PatternFinding",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/PatternFinding.php"
+                    },
+                    {
+                        "namespace": "App\\Model",
+                        "class_name": "ConstantInfo",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "toArray",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 32,
+                        "fqcn": "App\\Model\\ConstantInfo",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/ConstantInfo.php"
+                    },
+                    {
+                        "namespace": "App\\Model",
+                        "class_name": "ClassInfo",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "toArray",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 59,
+                        "fqcn": "App\\Model\\ClassInfo",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/ClassInfo.php"
+                    },
+                    {
+                        "namespace": "App\\Model",
+                        "class_name": "PatternConfig",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "default",
+                                "visibility": "public",
+                                "is_static": true,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "toArray",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 59,
+                        "fqcn": "App\\Model\\PatternConfig",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/PatternConfig.php"
+                    },
+                    {
+                        "namespace": "App\\Model",
+                        "class_name": "PropertyInfo",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "__construct",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "toArray",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 38,
+                        "fqcn": "App\\Model\\PropertyInfo",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/PropertyInfo.php"
+                    },
+                    {
+                        "namespace": "App\\Util",
+                        "class_name": "AstVisitor",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "traverse",
+                                "visibility": "public",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "enter",
+                                "visibility": "protected",
+                                "is_static": false,
+                                "is_abstract": true,
+                                "is_final": false
+                            },
+                            {
+                                "name": "leave",
+                                "visibility": "protected",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "matches",
+                                "visibility": "protected",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "filterNodes",
+                                "visibility": "protected",
+                                "is_static": false,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 89,
+                        "fqcn": "App\\Util\\AstVisitor",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/AstVisitor.php"
+                    },
+                    {
+                        "namespace": "App\\Util",
+                        "class_name": "UseStatementExtractor",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "extractFromStatements",
+                                "visibility": "public",
+                                "is_static": true,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractFromUseNode",
+                                "visibility": "public",
+                                "is_static": true,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractFromNamespace",
+                                "visibility": "public",
+                                "is_static": true,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractFromFile",
+                                "visibility": "public",
+                                "is_static": true,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getFqcnFromUseItem",
+                                "visibility": "private",
+                                "is_static": true,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getShortNameFromUseItem",
+                                "visibility": "private",
+                                "is_static": true,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 125,
+                        "fqcn": "App\\Util\\UseStatementExtractor",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/UseStatementExtractor.php"
+                    },
+                    {
+                        "namespace": "App\\Util",
+                        "class_name": "CodeMetrics",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "countLinesOfCode",
+                                "visibility": "public",
+                                "is_static": true,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "countMethods",
+                                "visibility": "public",
+                                "is_static": true,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "countProperties",
+                                "visibility": "public",
+                                "is_static": true,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 74,
+                        "fqcn": "App\\Util\\CodeMetrics",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/CodeMetrics.php"
+                    },
+                    {
+                        "namespace": "App\\Util",
+                        "class_name": "FqcnUtils",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "extractClassName",
+                                "visibility": "public",
+                                "is_static": true,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "extractNamespace",
+                                "visibility": "public",
+                                "is_static": true,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "isFullyQualified",
+                                "visibility": "public",
+                                "is_static": true,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "toFqcn",
+                                "visibility": "public",
+                                "is_static": true,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 61,
+                        "fqcn": "App\\Util\\FqcnUtils",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/FqcnUtils.php"
+                    },
+                    {
+                        "namespace": "App\\Util",
+                        "class_name": "FileSystemUtils",
+                        "extends": null,
+                        "implements": [],
+                        "methods": [
+                            {
+                                "name": "findPhpFiles",
+                                "visibility": "public",
+                                "is_static": true,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "isDirectory",
+                                "visibility": "public",
+                                "is_static": true,
+                                "is_abstract": false,
+                                "is_final": false
+                            },
+                            {
+                                "name": "getRelativePath",
+                                "visibility": "public",
+                                "is_static": true,
+                                "is_abstract": false,
+                                "is_final": false
+                            }
+                        ],
+                        "properties": [],
+                        "constants": [],
+                        "dependencies": [],
+                        "lines_of_code": 64,
+                        "fqcn": "App\\Util\\FileSystemUtils",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/FileSystemUtils.php"
+                    }
+                ]
+            },
+            "execution_time": 0.033883094787597656,
+            "file_count": 39,
+            "output_file": "\/home\/alex\/workspace\/lossless-analysis\/tools\/self-analysis\/reports\/raw_classanalyzer.json"
+        },
+        "dependencyAnalyzer": {
+            "status": "success",
+            "results": {
+                "nodes": [
+                    {
+                        "id": 0,
+                        "fqcn": "App\\Analyzer\\DependencyAnalyzerInterface",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/DependencyAnalyzerInterface.php",
+                        "type": "interface",
+                        "namespace": "App\\Analyzer",
+                        "name": "DependencyAnalyzerInterface"
+                    },
+                    {
+                        "id": 1,
+                        "fqcn": "App\\Analyzer\\AnalyzerInterface",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/AnalyzerInterface.php",
+                        "type": "interface",
+                        "namespace": "App\\Analyzer",
+                        "name": "AnalyzerInterface"
+                    },
+                    {
+                        "id": 2,
+                        "fqcn": "App\\Analyzer\\Dependency\\DependencyVisitor",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/DependencyVisitor.php",
+                        "type": "class",
+                        "namespace": "App\\Analyzer\\Dependency",
+                        "name": "DependencyVisitor"
+                    },
+                    {
+                        "id": 3,
+                        "fqcn": "App\\Util\\AstVisitor",
+                        "type": "external",
+                        "namespace": "App\\Util",
+                        "name": "AstVisitor"
+                    },
+                    {
+                        "id": 4,
+                        "fqcn": "App\\Analyzer\\Dependency\\DependencyResolver",
+                        "type": "external",
+                        "namespace": "App\\Analyzer\\Dependency",
+                        "name": "DependencyResolver"
+                    },
+                    {
+                        "id": 5,
+                        "fqcn": "PhpSyntax\\Nodes\\FileNode",
+                        "type": "external",
+                        "namespace": "PhpSyntax\\Nodes",
+                        "name": "FileNode"
+                    },
+                    {
+                        "id": 6,
+                        "fqcn": "PhpSyntax\\Nodes\\Statement\\ClassNode",
+                        "type": "external",
+                        "namespace": "PhpSyntax\\Nodes\\Statement",
+                        "name": "ClassNode"
+                    },
+                    {
+                        "id": 7,
+                        "fqcn": "PhpSyntax\\Nodes\\Statement\\InterfaceNode",
+                        "type": "external",
+                        "namespace": "PhpSyntax\\Nodes\\Statement",
+                        "name": "InterfaceNode"
+                    },
+                    {
+                        "id": 8,
+                        "fqcn": "PhpSyntax\\Nodes\\Member\\MethodNode",
+                        "type": "external",
+                        "namespace": "PhpSyntax\\Nodes\\Member",
+                        "name": "MethodNode"
+                    },
+                    {
+                        "id": 9,
+                        "fqcn": "PhpSyntax\\Nodes\\Member\\PropertyNode",
+                        "type": "external",
+                        "namespace": "PhpSyntax\\Nodes\\Member",
+                        "name": "PropertyNode"
+                    },
+                    {
+                        "id": 10,
+                        "fqcn": "App\\Analyzer\\Dependency\\SyntaxNode",
+                        "type": "external",
+                        "namespace": "App\\Analyzer\\Dependency",
+                        "name": "SyntaxNode"
+                    },
+                    {
+                        "id": 11,
+                        "fqcn": "App\\Analyzer\\Dependency\\DependencyExtractor",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/DependencyExtractor.php",
+                        "type": "class",
+                        "namespace": "App\\Analyzer\\Dependency",
+                        "name": "DependencyExtractor"
+                    },
+                    {
+                        "id": 12,
+                        "fqcn": "App\\Analyzer\\Dependency\\CircularDependencyDetector",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/CircularDependencyDetector.php",
+                        "type": "class",
+                        "namespace": "App\\Analyzer\\Dependency",
+                        "name": "CircularDependencyDetector"
+                    },
+                    {
+                        "id": 13,
+                        "fqcn": "App\\Analyzer\\Dependency\\DependencyGraphBuilder",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/DependencyGraphBuilder.php",
+                        "type": "class",
+                        "namespace": "App\\Analyzer\\Dependency",
+                        "name": "DependencyGraphBuilder"
+                    },
+                    {
+                        "id": 14,
+                        "fqcn": "PhpSyntax\\Parser",
+                        "type": "external",
+                        "namespace": "PhpSyntax",
+                        "name": "Parser"
+                    },
+                    {
+                        "id": 15,
+                        "fqcn": "App\\Analyzer\\Pattern\\AntiPatternDetector",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/AntiPatternDetector.php",
+                        "type": "class",
+                        "namespace": "App\\Analyzer\\Pattern",
+                        "name": "AntiPatternDetector"
+                    },
+                    {
+                        "id": 16,
+                        "fqcn": "App\\Analyzer\\Pattern\\ClassInfoExtractor",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/ClassInfoExtractor.php",
+                        "type": "class",
+                        "namespace": "App\\Analyzer\\Pattern",
+                        "name": "ClassInfoExtractor"
+                    },
+                    {
+                        "id": 17,
+                        "fqcn": "PhpSyntax\\Node",
+                        "type": "external",
+                        "namespace": "PhpSyntax",
+                        "name": "Node"
+                    },
+                    {
+                        "id": 18,
+                        "fqcn": "PhpSyntax\\Nodes\\ModifiersNode",
+                        "type": "external",
+                        "namespace": "PhpSyntax\\Nodes",
+                        "name": "ModifiersNode"
+                    },
+                    {
+                        "id": 19,
+                        "fqcn": "App\\Analyzer\\Pattern\\LayerViolationDetector",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/LayerViolationDetector.php",
+                        "type": "class",
+                        "namespace": "App\\Analyzer\\Pattern",
+                        "name": "LayerViolationDetector"
+                    },
+                    {
+                        "id": 20,
+                        "fqcn": "App\\Analyzer\\Pattern\\DirectoryPatternAnalyzer",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/DirectoryPatternAnalyzer.php",
+                        "type": "class",
+                        "namespace": "App\\Analyzer\\Pattern",
+                        "name": "DirectoryPatternAnalyzer"
+                    },
+                    {
+                        "id": 21,
+                        "fqcn": "App\\Analyzer\\Pattern\\ClassPatternAnalyzer",
+                        "type": "external",
+                        "namespace": "App\\Analyzer\\Pattern",
+                        "name": "ClassPatternAnalyzer"
+                    },
+                    {
+                        "id": 22,
+                        "fqcn": "App\\Analyzer\\Pattern\\DesignPatternDetector",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/DesignPatternDetector.php",
+                        "type": "class",
+                        "namespace": "App\\Analyzer\\Pattern",
+                        "name": "DesignPatternDetector"
+                    },
+                    {
+                        "id": 23,
+                        "fqcn": "App\\Analyzer\\AbstractAnalyzer",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/AbstractAnalyzer.php",
+                        "type": "class",
+                        "namespace": "App\\Analyzer",
+                        "name": "AbstractAnalyzer"
+                    },
+                    {
+                        "id": 24,
+                        "fqcn": "App\\Analyzer\\ClassInfoVisitor",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/ClassInfoVisitor.php",
+                        "type": "class",
+                        "namespace": "App\\Analyzer",
+                        "name": "ClassInfoVisitor"
+                    },
+                    {
+                        "id": 25,
+                        "fqcn": "App\\Model\\ClassInfo",
+                        "type": "external",
+                        "namespace": "App\\Model",
+                        "name": "ClassInfo"
+                    },
+                    {
+                        "id": 26,
+                        "fqcn": "App\\Model\\MethodInfo",
+                        "type": "external",
+                        "namespace": "App\\Model",
+                        "name": "MethodInfo"
+                    },
+                    {
+                        "id": 27,
+                        "fqcn": "App\\Model\\PropertyInfo",
+                        "type": "external",
+                        "namespace": "App\\Model",
+                        "name": "PropertyInfo"
+                    },
+                    {
+                        "id": 28,
+                        "fqcn": "App\\Model\\ConstantInfo",
+                        "type": "external",
+                        "namespace": "App\\Model",
+                        "name": "ConstantInfo"
+                    },
+                    {
+                        "id": 29,
+                        "fqcn": "App\\Analyzer\\PatternDetector",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/PatternDetector.php",
+                        "type": "class",
+                        "namespace": "App\\Analyzer",
+                        "name": "PatternDetector"
+                    },
+                    {
+                        "id": 30,
+                        "fqcn": "App\\Analyzer\\DependencyAnalyzer",
+                        "type": "external",
+                        "namespace": "App\\Analyzer",
+                        "name": "DependencyAnalyzer"
+                    },
+                    {
+                        "id": 31,
+                        "fqcn": "App\\Analyzer\\ClassAnalyzer",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/ClassAnalyzer.php",
+                        "type": "class",
+                        "namespace": "App\\Analyzer",
+                        "name": "ClassAnalyzer"
+                    },
+                    {
+                        "id": 32,
+                        "fqcn": "App\\Model\\PatternThresholds",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/PatternThresholds.php",
+                        "type": "class",
+                        "namespace": "App\\Model",
+                        "name": "PatternThresholds"
+                    },
+                    {
+                        "id": 33,
+                        "fqcn": "App\\Model\\PatternSeverity",
+                        "type": "external",
+                        "namespace": "App\\Model",
+                        "name": "PatternSeverity"
+                    },
+                    {
+                        "id": 34,
+                        "fqcn": "App\\Model\\Graph\\Node",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/Graph\/Node.php",
+                        "type": "class",
+                        "namespace": "App\\Model\\Graph",
+                        "name": "Node"
+                    },
+                    {
+                        "id": 35,
+                        "fqcn": "App\\Model\\Graph\\DependencyGraph",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/Graph\/DependencyGraph.php",
+                        "type": "class",
+                        "namespace": "App\\Model\\Graph",
+                        "name": "DependencyGraph"
+                    },
+                    {
+                        "id": 36,
+                        "fqcn": "App\\Model\\Graph\\Edge",
+                        "type": "external",
+                        "namespace": "App\\Model\\Graph",
+                        "name": "Edge"
+                    },
+                    {
+                        "id": 37,
+                        "fqcn": "App\\Model\\DependencyType",
+                        "type": "external",
+                        "namespace": "App\\Model",
+                        "name": "DependencyType"
+                    },
+                    {
+                        "id": 38,
+                        "fqcn": "App\\Model\\DependencyInfo",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/DependencyInfo.php",
+                        "type": "class",
+                        "namespace": "App\\Model",
+                        "name": "DependencyInfo"
+                    },
+                    {
+                        "id": 39,
+                        "fqcn": "App\\Model\\LayerConfig",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/LayerConfig.php",
+                        "type": "class",
+                        "namespace": "App\\Model",
+                        "name": "LayerConfig"
+                    },
+                    {
+                        "id": 40,
+                        "fqcn": "App\\Model\\PatternFinding",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/PatternFinding.php",
+                        "type": "class",
+                        "namespace": "App\\Model",
+                        "name": "PatternFinding"
+                    },
+                    {
+                        "id": 41,
+                        "fqcn": "App\\Model\\PatternType",
+                        "type": "external",
+                        "namespace": "App\\Model",
+                        "name": "PatternType"
+                    },
+                    {
+                        "id": 42,
+                        "fqcn": "App\\Model\\PatternConfig",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/PatternConfig.php",
+                        "type": "class",
+                        "namespace": "App\\Model",
+                        "name": "PatternConfig"
+                    },
+                    {
+                        "id": 43,
+                        "fqcn": "App\\Util\\SyntaxNode",
+                        "type": "external",
+                        "namespace": "App\\Util",
+                        "name": "SyntaxNode"
+                    },
+                    {
+                        "id": 44,
+                        "fqcn": "App\\Util\\UseStatementExtractor",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/UseStatementExtractor.php",
+                        "type": "class",
+                        "namespace": "App\\Util",
+                        "name": "UseStatementExtractor"
+                    },
+                    {
+                        "id": 45,
+                        "fqcn": "PhpSyntax\\Nodes\\Statement\\UseNode",
+                        "type": "external",
+                        "namespace": "PhpSyntax\\Nodes\\Statement",
+                        "name": "UseNode"
+                    },
+                    {
+                        "id": 46,
+                        "fqcn": "PhpSyntax\\Nodes\\Statement\\NamespaceNode",
+                        "type": "external",
+                        "namespace": "PhpSyntax\\Nodes\\Statement",
+                        "name": "NamespaceNode"
+                    },
+                    {
+                        "id": 47,
+                        "fqcn": "PhpSyntax\\Nodes\\UseItemNode",
+                        "type": "external",
+                        "namespace": "PhpSyntax\\Nodes",
+                        "name": "UseItemNode"
+                    },
+                    {
+                        "id": 48,
+                        "fqcn": "App\\Util\\CodeMetrics",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/CodeMetrics.php",
+                        "type": "class",
+                        "namespace": "App\\Util",
+                        "name": "CodeMetrics"
+                    },
+                    {
+                        "id": 49,
+                        "fqcn": "App\\Util\\FqcnUtils",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/FqcnUtils.php",
+                        "type": "class",
+                        "namespace": "App\\Util",
+                        "name": "FqcnUtils"
+                    },
+                    {
+                        "id": 50,
+                        "fqcn": "App\\Util\\FileSystemUtils",
+                        "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/FileSystemUtils.php",
+                        "type": "class",
+                        "namespace": "App\\Util",
+                        "name": "FileSystemUtils"
+                    },
+                    {
+                        "id": 51,
+                        "fqcn": "RecursiveIteratorIterator",
+                        "type": "external",
+                        "namespace": "",
+                        "name": "RecursiveIteratorIterator"
+                    },
+                    {
+                        "id": 52,
+                        "fqcn": "RecursiveDirectoryIterator",
+                        "type": "external",
+                        "namespace": "",
+                        "name": "RecursiveDirectoryIterator"
+                    }
+                ],
+                "edges": [
+                    {
+                        "source": 2,
+                        "target": 3,
+                        "type": "extends"
+                    },
+                    {
+                        "source": 2,
+                        "target": 4,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 2,
+                        "target": 4,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 2,
+                        "target": 4,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 2,
+                        "target": 5,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 2,
+                        "target": 6,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 2,
+                        "target": 7,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 2,
+                        "target": 8,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 2,
+                        "target": 9,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 2,
+                        "target": 10,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 2,
+                        "target": 10,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 11,
+                        "target": 4,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 11,
+                        "target": 4,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 11,
+                        "target": 4,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 11,
+                        "target": 5,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 11,
+                        "target": 2,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 11,
+                        "target": 5,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 11,
+                        "target": 6,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 11,
+                        "target": 7,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 13,
+                        "target": 11,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 13,
+                        "target": 11,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 13,
+                        "target": 11,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 13,
+                        "target": 14,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 13,
+                        "target": 14,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 16,
+                        "target": 6,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 16,
+                        "target": 6,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 16,
+                        "target": 8,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 16,
+                        "target": 9,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 16,
+                        "target": 17,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 16,
+                        "target": 18,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 20,
+                        "target": 21,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 20,
+                        "target": 19,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 20,
+                        "target": 21,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 20,
+                        "target": 19,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 20,
+                        "target": 21,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 20,
+                        "target": 19,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 20,
+                        "target": 14,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 20,
+                        "target": 5,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 21,
+                        "target": 16,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 21,
+                        "target": 22,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 21,
+                        "target": 15,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 21,
+                        "target": 16,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 21,
+                        "target": 22,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 21,
+                        "target": 15,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 21,
+                        "target": 16,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 21,
+                        "target": 22,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 21,
+                        "target": 15,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 21,
+                        "target": 6,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 23,
+                        "target": 14,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 23,
+                        "target": 14,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 23,
+                        "target": 5,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 23,
+                        "target": 5,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 23,
+                        "target": 14,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 24,
+                        "target": 3,
+                        "type": "extends"
+                    },
+                    {
+                        "source": 24,
+                        "target": 25,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 24,
+                        "target": 5,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 24,
+                        "target": 25,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 24,
+                        "target": 25,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 24,
+                        "target": 6,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 24,
+                        "target": 25,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 24,
+                        "target": 6,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 24,
+                        "target": 26,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 24,
+                        "target": 6,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 24,
+                        "target": 27,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 24,
+                        "target": 6,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 24,
+                        "target": 28,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 24,
+                        "target": 18,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 29,
+                        "target": 23,
+                        "type": "extends"
+                    },
+                    {
+                        "source": 29,
+                        "target": 30,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 29,
+                        "target": 20,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 29,
+                        "target": 30,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 29,
+                        "target": 20,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 29,
+                        "target": 21,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 29,
+                        "target": 19,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 29,
+                        "target": 5,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 29,
+                        "target": 6,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 29,
+                        "target": 21,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 30,
+                        "target": 23,
+                        "type": "extends"
+                    },
+                    {
+                        "source": 30,
+                        "target": 0,
+                        "type": "implements"
+                    },
+                    {
+                        "source": 30,
+                        "target": 11,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 30,
+                        "target": 13,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 30,
+                        "target": 12,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 30,
+                        "target": 4,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 30,
+                        "target": 11,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 30,
+                        "target": 13,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 30,
+                        "target": 12,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 30,
+                        "target": 4,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 30,
+                        "target": 11,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 30,
+                        "target": 13,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 30,
+                        "target": 12,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 30,
+                        "target": 4,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 31,
+                        "target": 23,
+                        "type": "extends"
+                    },
+                    {
+                        "source": 31,
+                        "target": 1,
+                        "type": "implements"
+                    },
+                    {
+                        "source": 31,
+                        "target": 25,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 31,
+                        "target": 25,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 31,
+                        "target": 25,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 31,
+                        "target": 5,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 31,
+                        "target": 25,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 31,
+                        "target": 25,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 31,
+                        "target": 6,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 31,
+                        "target": 26,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 31,
+                        "target": 6,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 31,
+                        "target": 27,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 31,
+                        "target": 6,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 31,
+                        "target": 28,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 31,
+                        "target": 18,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 32,
+                        "target": 33,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 35,
+                        "target": 34,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 35,
+                        "target": 36,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 36,
+                        "target": 37,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 38,
+                        "target": 37,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 39,
+                        "target": 33,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 40,
+                        "target": 41,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 40,
+                        "target": 33,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 42,
+                        "target": 32,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 42,
+                        "target": 32,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 42,
+                        "target": 32,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 42,
+                        "target": 39,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 42,
+                        "target": 32,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 42,
+                        "target": 32,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 42,
+                        "target": 32,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 42,
+                        "target": 39,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 3,
+                        "target": 43,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 44,
+                        "target": 45,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 44,
+                        "target": 46,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 44,
+                        "target": 5,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 44,
+                        "target": 47,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 44,
+                        "target": 47,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 48,
+                        "target": 6,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 48,
+                        "target": 6,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 48,
+                        "target": 6,
+                        "type": "type_hint"
+                    },
+                    {
+                        "source": 50,
+                        "target": 51,
+                        "type": "instantiation"
+                    },
+                    {
+                        "source": 50,
+                        "target": 52,
+                        "type": "instantiation"
+                    }
+                ]
+            },
+            "execution_time": 0.03369307518005371,
+            "file_count": 39,
+            "output_file": "\/home\/alex\/workspace\/lossless-analysis\/tools\/self-analysis\/reports\/raw_dependencyanalyzer.json"
+        },
+        "patternDetector": {
+            "status": "success",
+            "results": {
+                "patterns": [
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Analyzer\\Dependency\\DependencyVisitor",
+                        "message": "Class App\\Analyzer\\Dependency\\DependencyVisitor uses constructor injection with 1 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 1,
+                            "constructor_params": 1
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Analyzer\\Dependency\\DependencyExtractor",
+                        "message": "Class App\\Analyzer\\Dependency\\DependencyExtractor uses constructor injection with 1 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 1,
+                            "constructor_params": 1
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Analyzer\\Dependency\\DependencyGraphBuilder",
+                        "message": "Class App\\Analyzer\\Dependency\\DependencyGraphBuilder uses constructor injection with 1 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 1,
+                            "constructor_params": 1
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Analyzer\\Pattern\\AntiPatternDetector",
+                        "message": "Class App\\Analyzer\\Pattern\\AntiPatternDetector uses constructor injection with 1 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 1,
+                            "constructor_params": 1
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Analyzer\\Pattern\\DirectoryPatternAnalyzer",
+                        "message": "Class App\\Analyzer\\Pattern\\DirectoryPatternAnalyzer uses constructor injection with 2 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 2,
+                            "constructor_params": 2
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Analyzer\\Pattern\\DesignPatternDetector",
+                        "message": "Class App\\Analyzer\\Pattern\\DesignPatternDetector uses constructor injection with 1 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 1,
+                            "constructor_params": 1
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Analyzer\\Pattern\\ClassPatternAnalyzer",
+                        "message": "Class App\\Analyzer\\Pattern\\ClassPatternAnalyzer uses constructor injection with 3 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 3,
+                            "constructor_params": 3
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Analyzer\\AbstractAnalyzer",
+                        "message": "Class App\\Analyzer\\AbstractAnalyzer uses constructor injection with 1 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 1,
+                            "constructor_params": 1
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Analyzer\\PatternDetector",
+                        "message": "Class App\\Analyzer\\PatternDetector uses constructor injection with 4 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 4,
+                            "constructor_params": 4
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Analyzer\\DependencyAnalyzer",
+                        "message": "Class App\\Analyzer\\DependencyAnalyzer uses constructor injection with 4 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 4,
+                            "constructor_params": 4
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Model\\MethodInfo",
+                        "message": "Class App\\Model\\MethodInfo uses constructor injection with 7 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 7,
+                            "constructor_params": 7
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Model\\PatternThresholds",
+                        "message": "Class App\\Model\\PatternThresholds uses constructor injection with 4 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 4,
+                            "constructor_params": 4
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Model\\Graph\\Node",
+                        "message": "Class App\\Model\\Graph\\Node uses constructor injection with 3 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 3,
+                            "constructor_params": 3
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Model\\Graph\\DependencyGraph",
+                        "message": "Class App\\Model\\Graph\\DependencyGraph uses constructor injection with 2 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 2,
+                            "constructor_params": 2
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Model\\Graph\\Edge",
+                        "message": "Class App\\Model\\Graph\\Edge uses constructor injection with 3 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 3,
+                            "constructor_params": 3
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Model\\DependencyInfo",
+                        "message": "Class App\\Model\\DependencyInfo uses constructor injection with 4 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 4,
+                            "constructor_params": 4
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Model\\LayerConfig",
+                        "message": "Class App\\Model\\LayerConfig uses constructor injection with 2 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 2,
+                            "constructor_params": 2
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Model\\PatternFinding",
+                        "message": "Class App\\Model\\PatternFinding uses constructor injection with 6 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 6,
+                            "constructor_params": 6
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Model\\ConstantInfo",
+                        "message": "Class App\\Model\\ConstantInfo uses constructor injection with 2 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 2,
+                            "constructor_params": 2
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Model\\ClassInfo",
+                        "message": "Class App\\Model\\ClassInfo uses constructor injection with 11 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 11,
+                            "constructor_params": 11
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Model\\PatternConfig",
+                        "message": "Class App\\Model\\PatternConfig uses constructor injection with 6 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 6,
+                            "constructor_params": 6
+                        }
+                    },
+                    {
+                        "type": "dependency_injection",
+                        "class": "App\\Model\\PropertyInfo",
+                        "message": "Class App\\Model\\PropertyInfo uses constructor injection with 4 type-hinted parameters",
+                        "severity": "low",
+                        "data": {
+                            "injected_dependencies": 4,
+                            "constructor_params": 4
+                        }
+                    }
+                ],
+                "anti_patterns": [
+                    {
+                        "type": "tight_coupling",
+                        "class": "App\\Analyzer\\Dependency\\DependencyGraphBuilder",
+                        "message": "Class App\\Analyzer\\Dependency\\DependencyGraphBuilder has tight coupling with 3 direct instantiations",
+                        "severity": "medium",
+                        "data": {
+                            "direct_instantiations": 3,
+                            "threshold": 3
+                        }
+                    },
+                    {
+                        "type": "tight_coupling",
+                        "class": "App\\Analyzer\\Pattern\\DirectoryPatternAnalyzer",
+                        "message": "Class App\\Analyzer\\Pattern\\DirectoryPatternAnalyzer has tight coupling with 3 direct instantiations",
+                        "severity": "medium",
+                        "data": {
+                            "direct_instantiations": 3,
+                            "threshold": 3
+                        }
+                    },
+                    {
+                        "type": "tight_coupling",
+                        "class": "App\\Analyzer\\Pattern\\ClassPatternAnalyzer",
+                        "message": "Class App\\Analyzer\\Pattern\\ClassPatternAnalyzer has tight coupling with 3 direct instantiations",
+                        "severity": "medium",
+                        "data": {
+                            "direct_instantiations": 3,
+                            "threshold": 3
+                        }
+                    },
+                    {
+                        "type": "tight_coupling",
+                        "class": "App\\Analyzer\\ClassInfoVisitor",
+                        "message": "Class App\\Analyzer\\ClassInfoVisitor has tight coupling with 5 direct instantiations",
+                        "severity": "medium",
+                        "data": {
+                            "direct_instantiations": 5,
+                            "threshold": 3
+                        }
+                    },
+                    {
+                        "type": "tight_coupling",
+                        "class": "App\\Analyzer\\PatternDetector",
+                        "message": "Class App\\Analyzer\\PatternDetector has tight coupling with 3 direct instantiations",
+                        "severity": "medium",
+                        "data": {
+                            "direct_instantiations": 3,
+                            "threshold": 3
+                        }
+                    },
+                    {
+                        "type": "tight_coupling",
+                        "class": "App\\Analyzer\\DependencyAnalyzer",
+                        "message": "Class App\\Analyzer\\DependencyAnalyzer has tight coupling with 4 direct instantiations",
+                        "severity": "medium",
+                        "data": {
+                            "direct_instantiations": 4,
+                            "threshold": 3
+                        }
+                    },
+                    {
+                        "type": "tight_coupling",
+                        "class": "App\\Analyzer\\ClassAnalyzer",
+                        "message": "Class App\\Analyzer\\ClassAnalyzer has tight coupling with 5 direct instantiations",
+                        "severity": "medium",
+                        "data": {
+                            "direct_instantiations": 5,
+                            "threshold": 3
+                        }
+                    },
+                    {
+                        "type": "static_overuse",
+                        "class": "App\\Util\\UseStatementExtractor",
+                        "message": "Class App\\Util\\UseStatementExtractor overuses static members: 6 static methods (threshold: 5)",
+                        "severity": "medium",
+                        "data": {
+                            "static_methods": 6,
+                            "static_properties": 0
+                        }
+                    }
+                ],
+                "files_analyzed": 39
+            },
+            "execution_time": 0.060337066650390625,
+            "file_count": 39,
+            "output_file": "\/home\/alex\/workspace\/lossless-analysis\/tools\/self-analysis\/reports\/raw_patterndetector.json"
+        }
+    },
+    "errors": [],
+    "warnings": []
+}

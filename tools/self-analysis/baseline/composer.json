@@ -1,0 +1,7 @@
+{
+    "name": "agmckee/phparchitector-baseline",
+    "type": "library",
+    "require": {
+        "phpsyntax/phpsyntax": "dev-master"
+    }
+}

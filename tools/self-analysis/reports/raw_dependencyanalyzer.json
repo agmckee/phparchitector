@@ -1,0 +1,1068 @@
+{
+    "nodes": [
+        {
+            "id": 0,
+            "fqcn": "App\\Analyzer\\DependencyAnalyzerInterface",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/DependencyAnalyzerInterface.php",
+            "type": "interface",
+            "namespace": "App\\Analyzer",
+            "name": "DependencyAnalyzerInterface"
+        },
+        {
+            "id": 1,
+            "fqcn": "App\\Analyzer\\AnalyzerInterface",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/AnalyzerInterface.php",
+            "type": "interface",
+            "namespace": "App\\Analyzer",
+            "name": "AnalyzerInterface"
+        },
+        {
+            "id": 2,
+            "fqcn": "App\\Analyzer\\Dependency\\DependencyVisitor",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/DependencyVisitor.php",
+            "type": "class",
+            "namespace": "App\\Analyzer\\Dependency",
+            "name": "DependencyVisitor"
+        },
+        {
+            "id": 3,
+            "fqcn": "App\\Util\\AstVisitor",
+            "type": "external",
+            "namespace": "App\\Util",
+            "name": "AstVisitor"
+        },
+        {
+            "id": 4,
+            "fqcn": "App\\Analyzer\\Dependency\\DependencyResolver",
+            "type": "external",
+            "namespace": "App\\Analyzer\\Dependency",
+            "name": "DependencyResolver"
+        },
+        {
+            "id": 5,
+            "fqcn": "PhpSyntax\\Nodes\\FileNode",
+            "type": "external",
+            "namespace": "PhpSyntax\\Nodes",
+            "name": "FileNode"
+        },
+        {
+            "id": 6,
+            "fqcn": "PhpSyntax\\Nodes\\Statement\\ClassNode",
+            "type": "external",
+            "namespace": "PhpSyntax\\Nodes\\Statement",
+            "name": "ClassNode"
+        },
+        {
+            "id": 7,
+            "fqcn": "PhpSyntax\\Nodes\\Statement\\InterfaceNode",
+            "type": "external",
+            "namespace": "PhpSyntax\\Nodes\\Statement",
+            "name": "InterfaceNode"
+        },
+        {
+            "id": 8,
+            "fqcn": "PhpSyntax\\Nodes\\Member\\MethodNode",
+            "type": "external",
+            "namespace": "PhpSyntax\\Nodes\\Member",
+            "name": "MethodNode"
+        },
+        {
+            "id": 9,
+            "fqcn": "PhpSyntax\\Nodes\\Member\\PropertyNode",
+            "type": "external",
+            "namespace": "PhpSyntax\\Nodes\\Member",
+            "name": "PropertyNode"
+        },
+        {
+            "id": 10,
+            "fqcn": "App\\Analyzer\\Dependency\\SyntaxNode",
+            "type": "external",
+            "namespace": "App\\Analyzer\\Dependency",
+            "name": "SyntaxNode"
+        },
+        {
+            "id": 11,
+            "fqcn": "App\\Analyzer\\Dependency\\DependencyExtractor",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/DependencyExtractor.php",
+            "type": "class",
+            "namespace": "App\\Analyzer\\Dependency",
+            "name": "DependencyExtractor"
+        },
+        {
+            "id": 12,
+            "fqcn": "App\\Analyzer\\Dependency\\CircularDependencyDetector",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/CircularDependencyDetector.php",
+            "type": "class",
+            "namespace": "App\\Analyzer\\Dependency",
+            "name": "CircularDependencyDetector"
+        },
+        {
+            "id": 13,
+            "fqcn": "App\\Analyzer\\Dependency\\DependencyGraphBuilder",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/DependencyGraphBuilder.php",
+            "type": "class",
+            "namespace": "App\\Analyzer\\Dependency",
+            "name": "DependencyGraphBuilder"
+        },
+        {
+            "id": 14,
+            "fqcn": "PhpSyntax\\Parser",
+            "type": "external",
+            "namespace": "PhpSyntax",
+            "name": "Parser"
+        },
+        {
+            "id": 15,
+            "fqcn": "App\\Analyzer\\Pattern\\AntiPatternDetector",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/AntiPatternDetector.php",
+            "type": "class",
+            "namespace": "App\\Analyzer\\Pattern",
+            "name": "AntiPatternDetector"
+        },
+        {
+            "id": 16,
+            "fqcn": "App\\Analyzer\\Pattern\\ClassInfoExtractor",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/ClassInfoExtractor.php",
+            "type": "class",
+            "namespace": "App\\Analyzer\\Pattern",
+            "name": "ClassInfoExtractor"
+        },
+        {
+            "id": 17,
+            "fqcn": "PhpSyntax\\Node",
+            "type": "external",
+            "namespace": "PhpSyntax",
+            "name": "Node"
+        },
+        {
+            "id": 18,
+            "fqcn": "PhpSyntax\\Nodes\\ModifiersNode",
+            "type": "external",
+            "namespace": "PhpSyntax\\Nodes",
+            "name": "ModifiersNode"
+        },
+        {
+            "id": 19,
+            "fqcn": "App\\Analyzer\\Pattern\\LayerViolationDetector",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/LayerViolationDetector.php",
+            "type": "class",
+            "namespace": "App\\Analyzer\\Pattern",
+            "name": "LayerViolationDetector"
+        },
+        {
+            "id": 20,
+            "fqcn": "App\\Analyzer\\Pattern\\DirectoryPatternAnalyzer",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/DirectoryPatternAnalyzer.php",
+            "type": "class",
+            "namespace": "App\\Analyzer\\Pattern",
+            "name": "DirectoryPatternAnalyzer"
+        },
+        {
+            "id": 21,
+            "fqcn": "App\\Analyzer\\Pattern\\ClassPatternAnalyzer",
+            "type": "external",
+            "namespace": "App\\Analyzer\\Pattern",
+            "name": "ClassPatternAnalyzer"
+        },
+        {
+            "id": 22,
+            "fqcn": "App\\Analyzer\\Pattern\\DesignPatternDetector",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/DesignPatternDetector.php",
+            "type": "class",
+            "namespace": "App\\Analyzer\\Pattern",
+            "name": "DesignPatternDetector"
+        },
+        {
+            "id": 23,
+            "fqcn": "App\\Analyzer\\AbstractAnalyzer",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/AbstractAnalyzer.php",
+            "type": "class",
+            "namespace": "App\\Analyzer",
+            "name": "AbstractAnalyzer"
+        },
+        {
+            "id": 24,
+            "fqcn": "App\\Analyzer\\ClassInfoVisitor",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/ClassInfoVisitor.php",
+            "type": "class",
+            "namespace": "App\\Analyzer",
+            "name": "ClassInfoVisitor"
+        },
+        {
+            "id": 25,
+            "fqcn": "App\\Model\\ClassInfo",
+            "type": "external",
+            "namespace": "App\\Model",
+            "name": "ClassInfo"
+        },
+        {
+            "id": 26,
+            "fqcn": "App\\Model\\MethodInfo",
+            "type": "external",
+            "namespace": "App\\Model",
+            "name": "MethodInfo"
+        },
+        {
+            "id": 27,
+            "fqcn": "App\\Model\\PropertyInfo",
+            "type": "external",
+            "namespace": "App\\Model",
+            "name": "PropertyInfo"
+        },
+        {
+            "id": 28,
+            "fqcn": "App\\Model\\ConstantInfo",
+            "type": "external",
+            "namespace": "App\\Model",
+            "name": "ConstantInfo"
+        },
+        {
+            "id": 29,
+            "fqcn": "App\\Analyzer\\PatternDetector",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/PatternDetector.php",
+            "type": "class",
+            "namespace": "App\\Analyzer",
+            "name": "PatternDetector"
+        },
+        {
+            "id": 30,
+            "fqcn": "App\\Analyzer\\DependencyAnalyzer",
+            "type": "external",
+            "namespace": "App\\Analyzer",
+            "name": "DependencyAnalyzer"
+        },
+        {
+            "id": 31,
+            "fqcn": "App\\Analyzer\\ClassAnalyzer",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/ClassAnalyzer.php",
+            "type": "class",
+            "namespace": "App\\Analyzer",
+            "name": "ClassAnalyzer"
+        },
+        {
+            "id": 32,
+            "fqcn": "App\\Model\\PatternThresholds",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/PatternThresholds.php",
+            "type": "class",
+            "namespace": "App\\Model",
+            "name": "PatternThresholds"
+        },
+        {
+            "id": 33,
+            "fqcn": "App\\Model\\PatternSeverity",
+            "type": "external",
+            "namespace": "App\\Model",
+            "name": "PatternSeverity"
+        },
+        {
+            "id": 34,
+            "fqcn": "App\\Model\\Graph\\Node",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/Graph\/Node.php",
+            "type": "class",
+            "namespace": "App\\Model\\Graph",
+            "name": "Node"
+        },
+        {
+            "id": 35,
+            "fqcn": "App\\Model\\Graph\\DependencyGraph",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/Graph\/DependencyGraph.php",
+            "type": "class",
+            "namespace": "App\\Model\\Graph",
+            "name": "DependencyGraph"
+        },
+        {
+            "id": 36,
+            "fqcn": "App\\Model\\Graph\\Edge",
+            "type": "external",
+            "namespace": "App\\Model\\Graph",
+            "name": "Edge"
+        },
+        {
+            "id": 37,
+            "fqcn": "App\\Model\\DependencyType",
+            "type": "external",
+            "namespace": "App\\Model",
+            "name": "DependencyType"
+        },
+        {
+            "id": 38,
+            "fqcn": "App\\Model\\DependencyInfo",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/DependencyInfo.php",
+            "type": "class",
+            "namespace": "App\\Model",
+            "name": "DependencyInfo"
+        },
+        {
+            "id": 39,
+            "fqcn": "App\\Model\\LayerConfig",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/LayerConfig.php",
+            "type": "class",
+            "namespace": "App\\Model",
+            "name": "LayerConfig"
+        },
+        {
+            "id": 40,
+            "fqcn": "App\\Model\\PatternFinding",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/PatternFinding.php",
+            "type": "class",
+            "namespace": "App\\Model",
+            "name": "PatternFinding"
+        },
+        {
+            "id": 41,
+            "fqcn": "App\\Model\\PatternType",
+            "type": "external",
+            "namespace": "App\\Model",
+            "name": "PatternType"
+        },
+        {
+            "id": 42,
+            "fqcn": "App\\Model\\PatternConfig",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/PatternConfig.php",
+            "type": "class",
+            "namespace": "App\\Model",
+            "name": "PatternConfig"
+        },
+        {
+            "id": 43,
+            "fqcn": "App\\Util\\SyntaxNode",
+            "type": "external",
+            "namespace": "App\\Util",
+            "name": "SyntaxNode"
+        },
+        {
+            "id": 44,
+            "fqcn": "App\\Util\\UseStatementExtractor",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/UseStatementExtractor.php",
+            "type": "class",
+            "namespace": "App\\Util",
+            "name": "UseStatementExtractor"
+        },
+        {
+            "id": 45,
+            "fqcn": "PhpSyntax\\Nodes\\Statement\\UseNode",
+            "type": "external",
+            "namespace": "PhpSyntax\\Nodes\\Statement",
+            "name": "UseNode"
+        },
+        {
+            "id": 46,
+            "fqcn": "PhpSyntax\\Nodes\\Statement\\NamespaceNode",
+            "type": "external",
+            "namespace": "PhpSyntax\\Nodes\\Statement",
+            "name": "NamespaceNode"
+        },
+        {
+            "id": 47,
+            "fqcn": "PhpSyntax\\Nodes\\UseItemNode",
+            "type": "external",
+            "namespace": "PhpSyntax\\Nodes",
+            "name": "UseItemNode"
+        },
+        {
+            "id": 48,
+            "fqcn": "App\\Util\\CodeMetrics",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/CodeMetrics.php",
+            "type": "class",
+            "namespace": "App\\Util",
+            "name": "CodeMetrics"
+        },
+        {
+            "id": 49,
+            "fqcn": "App\\Util\\FqcnUtils",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/FqcnUtils.php",
+            "type": "class",
+            "namespace": "App\\Util",
+            "name": "FqcnUtils"
+        },
+        {
+            "id": 50,
+            "fqcn": "App\\Util\\FileSystemUtils",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/FileSystemUtils.php",
+            "type": "class",
+            "namespace": "App\\Util",
+            "name": "FileSystemUtils"
+        },
+        {
+            "id": 51,
+            "fqcn": "RecursiveIteratorIterator",
+            "type": "external",
+            "namespace": "",
+            "name": "RecursiveIteratorIterator"
+        },
+        {
+            "id": 52,
+            "fqcn": "RecursiveDirectoryIterator",
+            "type": "external",
+            "namespace": "",
+            "name": "RecursiveDirectoryIterator"
+        }
+    ],
+    "edges": [
+        {
+            "source": 2,
+            "target": 3,
+            "type": "extends"
+        },
+        {
+            "source": 2,
+            "target": 4,
+            "type": "type_hint"
+        },
+        {
+            "source": 2,
+            "target": 4,
+            "type": "type_hint"
+        },
+        {
+            "source": 2,
+            "target": 4,
+            "type": "instantiation"
+        },
+        {
+            "source": 2,
+            "target": 5,
+            "type": "type_hint"
+        },
+        {
+            "source": 2,
+            "target": 6,
+            "type": "type_hint"
+        },
+        {
+            "source": 2,
+            "target": 7,
+            "type": "type_hint"
+        },
+        {
+            "source": 2,
+            "target": 8,
+            "type": "type_hint"
+        },
+        {
+            "source": 2,
+            "target": 9,
+            "type": "type_hint"
+        },
+        {
+            "source": 2,
+            "target": 10,
+            "type": "type_hint"
+        },
+        {
+            "source": 2,
+            "target": 10,
+            "type": "type_hint"
+        },
+        {
+            "source": 11,
+            "target": 4,
+            "type": "type_hint"
+        },
+        {
+            "source": 11,
+            "target": 4,
+            "type": "type_hint"
+        },
+        {
+            "source": 11,
+            "target": 4,
+            "type": "instantiation"
+        },
+        {
+            "source": 11,
+            "target": 5,
+            "type": "type_hint"
+        },
+        {
+            "source": 11,
+            "target": 2,
+            "type": "instantiation"
+        },
+        {
+            "source": 11,
+            "target": 5,
+            "type": "type_hint"
+        },
+        {
+            "source": 11,
+            "target": 6,
+            "type": "type_hint"
+        },
+        {
+            "source": 11,
+            "target": 7,
+            "type": "type_hint"
+        },
+        {
+            "source": 13,
+            "target": 11,
+            "type": "type_hint"
+        },
+        {
+            "source": 13,
+            "target": 11,
+            "type": "type_hint"
+        },
+        {
+            "source": 13,
+            "target": 11,
+            "type": "instantiation"
+        },
+        {
+            "source": 13,
+            "target": 14,
+            "type": "instantiation"
+        },
+        {
+            "source": 13,
+            "target": 14,
+            "type": "instantiation"
+        },
+        {
+            "source": 16,
+            "target": 6,
+            "type": "type_hint"
+        },
+        {
+            "source": 16,
+            "target": 6,
+            "type": "type_hint"
+        },
+        {
+            "source": 16,
+            "target": 8,
+            "type": "type_hint"
+        },
+        {
+            "source": 16,
+            "target": 9,
+            "type": "type_hint"
+        },
+        {
+            "source": 16,
+            "target": 17,
+            "type": "type_hint"
+        },
+        {
+            "source": 16,
+            "target": 18,
+            "type": "type_hint"
+        },
+        {
+            "source": 20,
+            "target": 21,
+            "type": "type_hint"
+        },
+        {
+            "source": 20,
+            "target": 19,
+            "type": "type_hint"
+        },
+        {
+            "source": 20,
+            "target": 21,
+            "type": "type_hint"
+        },
+        {
+            "source": 20,
+            "target": 19,
+            "type": "type_hint"
+        },
+        {
+            "source": 20,
+            "target": 21,
+            "type": "instantiation"
+        },
+        {
+            "source": 20,
+            "target": 19,
+            "type": "instantiation"
+        },
+        {
+            "source": 20,
+            "target": 14,
+            "type": "instantiation"
+        },
+        {
+            "source": 20,
+            "target": 5,
+            "type": "type_hint"
+        },
+        {
+            "source": 21,
+            "target": 16,
+            "type": "type_hint"
+        },
+        {
+            "source": 21,
+            "target": 22,
+            "type": "type_hint"
+        },
+        {
+            "source": 21,
+            "target": 15,
+            "type": "type_hint"
+        },
+        {
+            "source": 21,
+            "target": 16,
+            "type": "type_hint"
+        },
+        {
+            "source": 21,
+            "target": 22,
+            "type": "type_hint"
+        },
+        {
+            "source": 21,
+            "target": 15,
+            "type": "type_hint"
+        },
+        {
+            "source": 21,
+            "target": 16,
+            "type": "instantiation"
+        },
+        {
+            "source": 21,
+            "target": 22,
+            "type": "instantiation"
+        },
+        {
+            "source": 21,
+            "target": 15,
+            "type": "instantiation"
+        },
+        {
+            "source": 21,
+            "target": 6,
+            "type": "type_hint"
+        },
+        {
+            "source": 23,
+            "target": 14,
+            "type": "type_hint"
+        },
+        {
+            "source": 23,
+            "target": 14,
+            "type": "instantiation"
+        },
+        {
+            "source": 23,
+            "target": 5,
+            "type": "type_hint"
+        },
+        {
+            "source": 23,
+            "target": 5,
+            "type": "type_hint"
+        },
+        {
+            "source": 23,
+            "target": 14,
+            "type": "type_hint"
+        },
+        {
+            "source": 24,
+            "target": 3,
+            "type": "extends"
+        },
+        {
+            "source": 24,
+            "target": 25,
+            "type": "type_hint"
+        },
+        {
+            "source": 24,
+            "target": 5,
+            "type": "type_hint"
+        },
+        {
+            "source": 24,
+            "target": 25,
+            "type": "instantiation"
+        },
+        {
+            "source": 24,
+            "target": 25,
+            "type": "type_hint"
+        },
+        {
+            "source": 24,
+            "target": 6,
+            "type": "type_hint"
+        },
+        {
+            "source": 24,
+            "target": 25,
+            "type": "instantiation"
+        },
+        {
+            "source": 24,
+            "target": 6,
+            "type": "type_hint"
+        },
+        {
+            "source": 24,
+            "target": 26,
+            "type": "instantiation"
+        },
+        {
+            "source": 24,
+            "target": 6,
+            "type": "type_hint"
+        },
+        {
+            "source": 24,
+            "target": 27,
+            "type": "instantiation"
+        },
+        {
+            "source": 24,
+            "target": 6,
+            "type": "type_hint"
+        },
+        {
+            "source": 24,
+            "target": 28,
+            "type": "instantiation"
+        },
+        {
+            "source": 24,
+            "target": 18,
+            "type": "type_hint"
+        },
+        {
+            "source": 29,
+            "target": 23,
+            "type": "extends"
+        },
+        {
+            "source": 29,
+            "target": 30,
+            "type": "type_hint"
+        },
+        {
+            "source": 29,
+            "target": 20,
+            "type": "type_hint"
+        },
+        {
+            "source": 29,
+            "target": 30,
+            "type": "instantiation"
+        },
+        {
+            "source": 29,
+            "target": 20,
+            "type": "instantiation"
+        },
+        {
+            "source": 29,
+            "target": 21,
+            "type": "instantiation"
+        },
+        {
+            "source": 29,
+            "target": 19,
+            "type": "instantiation"
+        },
+        {
+            "source": 29,
+            "target": 5,
+            "type": "type_hint"
+        },
+        {
+            "source": 29,
+            "target": 6,
+            "type": "type_hint"
+        },
+        {
+            "source": 29,
+            "target": 21,
+            "type": "instantiation"
+        },
+        {
+            "source": 30,
+            "target": 23,
+            "type": "extends"
+        },
+        {
+            "source": 30,
+            "target": 0,
+            "type": "implements"
+        },
+        {
+            "source": 30,
+            "target": 11,
+            "type": "type_hint"
+        },
+        {
+            "source": 30,
+            "target": 13,
+            "type": "type_hint"
+        },
+        {
+            "source": 30,
+            "target": 12,
+            "type": "type_hint"
+        },
+        {
+            "source": 30,
+            "target": 4,
+            "type": "type_hint"
+        },
+        {
+            "source": 30,
+            "target": 11,
+            "type": "type_hint"
+        },
+        {
+            "source": 30,
+            "target": 13,
+            "type": "type_hint"
+        },
+        {
+            "source": 30,
+            "target": 12,
+            "type": "type_hint"
+        },
+        {
+            "source": 30,
+            "target": 4,
+            "type": "type_hint"
+        },
+        {
+            "source": 30,
+            "target": 11,
+            "type": "instantiation"
+        },
+        {
+            "source": 30,
+            "target": 13,
+            "type": "instantiation"
+        },
+        {
+            "source": 30,
+            "target": 12,
+            "type": "instantiation"
+        },
+        {
+            "source": 30,
+            "target": 4,
+            "type": "instantiation"
+        },
+        {
+            "source": 31,
+            "target": 23,
+            "type": "extends"
+        },
+        {
+            "source": 31,
+            "target": 1,
+            "type": "implements"
+        },
+        {
+            "source": 31,
+            "target": 25,
+            "type": "type_hint"
+        },
+        {
+            "source": 31,
+            "target": 25,
+            "type": "type_hint"
+        },
+        {
+            "source": 31,
+            "target": 25,
+            "type": "type_hint"
+        },
+        {
+            "source": 31,
+            "target": 5,
+            "type": "type_hint"
+        },
+        {
+            "source": 31,
+            "target": 25,
+            "type": "instantiation"
+        },
+        {
+            "source": 31,
+            "target": 25,
+            "type": "instantiation"
+        },
+        {
+            "source": 31,
+            "target": 6,
+            "type": "type_hint"
+        },
+        {
+            "source": 31,
+            "target": 26,
+            "type": "instantiation"
+        },
+        {
+            "source": 31,
+            "target": 6,
+            "type": "type_hint"
+        },
+        {
+            "source": 31,
+            "target": 27,
+            "type": "instantiation"
+        },
+        {
+            "source": 31,
+            "target": 6,
+            "type": "type_hint"
+        },
+        {
+            "source": 31,
+            "target": 28,
+            "type": "instantiation"
+        },
+        {
+            "source": 31,
+            "target": 18,
+            "type": "type_hint"
+        },
+        {
+            "source": 32,
+            "target": 33,
+            "type": "type_hint"
+        },
+        {
+            "source": 35,
+            "target": 34,
+            "type": "type_hint"
+        },
+        {
+            "source": 35,
+            "target": 36,
+            "type": "type_hint"
+        },
+        {
+            "source": 36,
+            "target": 37,
+            "type": "type_hint"
+        },
+        {
+            "source": 38,
+            "target": 37,
+            "type": "type_hint"
+        },
+        {
+            "source": 39,
+            "target": 33,
+            "type": "type_hint"
+        },
+        {
+            "source": 40,
+            "target": 41,
+            "type": "type_hint"
+        },
+        {
+            "source": 40,
+            "target": 33,
+            "type": "type_hint"
+        },
+        {
+            "source": 42,
+            "target": 32,
+            "type": "type_hint"
+        },
+        {
+            "source": 42,
+            "target": 32,
+            "type": "type_hint"
+        },
+        {
+            "source": 42,
+            "target": 32,
+            "type": "type_hint"
+        },
+        {
+            "source": 42,
+            "target": 39,
+            "type": "type_hint"
+        },
+        {
+            "source": 42,
+            "target": 32,
+            "type": "instantiation"
+        },
+        {
+            "source": 42,
+            "target": 32,
+            "type": "instantiation"
+        },
+        {
+            "source": 42,
+            "target": 32,
+            "type": "instantiation"
+        },
+        {
+            "source": 42,
+            "target": 39,
+            "type": "instantiation"
+        },
+        {
+            "source": 3,
+            "target": 43,
+            "type": "type_hint"
+        },
+        {
+            "source": 44,
+            "target": 45,
+            "type": "type_hint"
+        },
+        {
+            "source": 44,
+            "target": 46,
+            "type": "type_hint"
+        },
+        {
+            "source": 44,
+            "target": 5,
+            "type": "type_hint"
+        },
+        {
+            "source": 44,
+            "target": 47,
+            "type": "type_hint"
+        },
+        {
+            "source": 44,
+            "target": 47,
+            "type": "type_hint"
+        },
+        {
+            "source": 48,
+            "target": 6,
+            "type": "type_hint"
+        },
+        {
+            "source": 48,
+            "target": 6,
+            "type": "type_hint"
+        },
+        {
+            "source": 48,
+            "target": 6,
+            "type": "type_hint"
+        },
+        {
+            "source": 50,
+            "target": 51,
+            "type": "instantiation"
+        },
+        {
+            "source": 50,
+            "target": 52,
+            "type": "instantiation"
+        }
+    ]
+}

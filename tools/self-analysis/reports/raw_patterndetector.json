@@ -1,0 +1,307 @@
+{
+    "patterns": [
+        {
+            "type": "dependency_injection",
+            "class": "App\\Analyzer\\Dependency\\DependencyVisitor",
+            "message": "Class App\\Analyzer\\Dependency\\DependencyVisitor uses constructor injection with 1 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 1,
+                "constructor_params": 1
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Analyzer\\Dependency\\DependencyExtractor",
+            "message": "Class App\\Analyzer\\Dependency\\DependencyExtractor uses constructor injection with 1 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 1,
+                "constructor_params": 1
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Analyzer\\Dependency\\DependencyGraphBuilder",
+            "message": "Class App\\Analyzer\\Dependency\\DependencyGraphBuilder uses constructor injection with 1 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 1,
+                "constructor_params": 1
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Analyzer\\Pattern\\AntiPatternDetector",
+            "message": "Class App\\Analyzer\\Pattern\\AntiPatternDetector uses constructor injection with 1 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 1,
+                "constructor_params": 1
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Analyzer\\Pattern\\DirectoryPatternAnalyzer",
+            "message": "Class App\\Analyzer\\Pattern\\DirectoryPatternAnalyzer uses constructor injection with 2 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 2,
+                "constructor_params": 2
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Analyzer\\Pattern\\DesignPatternDetector",
+            "message": "Class App\\Analyzer\\Pattern\\DesignPatternDetector uses constructor injection with 1 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 1,
+                "constructor_params": 1
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Analyzer\\Pattern\\ClassPatternAnalyzer",
+            "message": "Class App\\Analyzer\\Pattern\\ClassPatternAnalyzer uses constructor injection with 3 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 3,
+                "constructor_params": 3
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Analyzer\\AbstractAnalyzer",
+            "message": "Class App\\Analyzer\\AbstractAnalyzer uses constructor injection with 1 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 1,
+                "constructor_params": 1
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Analyzer\\PatternDetector",
+            "message": "Class App\\Analyzer\\PatternDetector uses constructor injection with 4 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 4,
+                "constructor_params": 4
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Analyzer\\DependencyAnalyzer",
+            "message": "Class App\\Analyzer\\DependencyAnalyzer uses constructor injection with 4 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 4,
+                "constructor_params": 4
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Model\\MethodInfo",
+            "message": "Class App\\Model\\MethodInfo uses constructor injection with 7 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 7,
+                "constructor_params": 7
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Model\\PatternThresholds",
+            "message": "Class App\\Model\\PatternThresholds uses constructor injection with 4 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 4,
+                "constructor_params": 4
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Model\\Graph\\Node",
+            "message": "Class App\\Model\\Graph\\Node uses constructor injection with 3 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 3,
+                "constructor_params": 3
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Model\\Graph\\DependencyGraph",
+            "message": "Class App\\Model\\Graph\\DependencyGraph uses constructor injection with 2 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 2,
+                "constructor_params": 2
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Model\\Graph\\Edge",
+            "message": "Class App\\Model\\Graph\\Edge uses constructor injection with 3 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 3,
+                "constructor_params": 3
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Model\\DependencyInfo",
+            "message": "Class App\\Model\\DependencyInfo uses constructor injection with 4 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 4,
+                "constructor_params": 4
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Model\\LayerConfig",
+            "message": "Class App\\Model\\LayerConfig uses constructor injection with 2 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 2,
+                "constructor_params": 2
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Model\\PatternFinding",
+            "message": "Class App\\Model\\PatternFinding uses constructor injection with 6 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 6,
+                "constructor_params": 6
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Model\\ConstantInfo",
+            "message": "Class App\\Model\\ConstantInfo uses constructor injection with 2 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 2,
+                "constructor_params": 2
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Model\\ClassInfo",
+            "message": "Class App\\Model\\ClassInfo uses constructor injection with 11 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 11,
+                "constructor_params": 11
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Model\\PatternConfig",
+            "message": "Class App\\Model\\PatternConfig uses constructor injection with 6 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 6,
+                "constructor_params": 6
+            }
+        },
+        {
+            "type": "dependency_injection",
+            "class": "App\\Model\\PropertyInfo",
+            "message": "Class App\\Model\\PropertyInfo uses constructor injection with 4 type-hinted parameters",
+            "severity": "low",
+            "data": {
+                "injected_dependencies": 4,
+                "constructor_params": 4
+            }
+        }
+    ],
+    "anti_patterns": [
+        {
+            "type": "tight_coupling",
+            "class": "App\\Analyzer\\Dependency\\DependencyGraphBuilder",
+            "message": "Class App\\Analyzer\\Dependency\\DependencyGraphBuilder has tight coupling with 3 direct instantiations",
+            "severity": "medium",
+            "data": {
+                "direct_instantiations": 3,
+                "threshold": 3
+            }
+        },
+        {
+            "type": "tight_coupling",
+            "class": "App\\Analyzer\\Pattern\\DirectoryPatternAnalyzer",
+            "message": "Class App\\Analyzer\\Pattern\\DirectoryPatternAnalyzer has tight coupling with 3 direct instantiations",
+            "severity": "medium",
+            "data": {
+                "direct_instantiations": 3,
+                "threshold": 3
+            }
+        },
+        {
+            "type": "tight_coupling",
+            "class": "App\\Analyzer\\Pattern\\ClassPatternAnalyzer",
+            "message": "Class App\\Analyzer\\Pattern\\ClassPatternAnalyzer has tight coupling with 3 direct instantiations",
+            "severity": "medium",
+            "data": {
+                "direct_instantiations": 3,
+                "threshold": 3
+            }
+        },
+        {
+            "type": "tight_coupling",
+            "class": "App\\Analyzer\\ClassInfoVisitor",
+            "message": "Class App\\Analyzer\\ClassInfoVisitor has tight coupling with 5 direct instantiations",
+            "severity": "medium",
+            "data": {
+                "direct_instantiations": 5,
+                "threshold": 3
+            }
+        },
+        {
+            "type": "tight_coupling",
+            "class": "App\\Analyzer\\PatternDetector",
+            "message": "Class App\\Analyzer\\PatternDetector has tight coupling with 3 direct instantiations",
+            "severity": "medium",
+            "data": {
+                "direct_instantiations": 3,
+                "threshold": 3
+            }
+        },
+        {
+            "type": "tight_coupling",
+            "class": "App\\Analyzer\\DependencyAnalyzer",
+            "message": "Class App\\Analyzer\\DependencyAnalyzer has tight coupling with 4 direct instantiations",
+            "severity": "medium",
+            "data": {
+                "direct_instantiations": 4,
+                "threshold": 3
+            }
+        },
+        {
+            "type": "tight_coupling",
+            "class": "App\\Analyzer\\ClassAnalyzer",
+            "message": "Class App\\Analyzer\\ClassAnalyzer has tight coupling with 5 direct instantiations",
+            "severity": "medium",
+            "data": {
+                "direct_instantiations": 5,
+                "threshold": 3
+            }
+        },
+        {
+            "type": "static_overuse",
+            "class": "App\\Util\\UseStatementExtractor",
+            "message": "Class App\\Util\\UseStatementExtractor overuses static members: 6 static methods (threshold: 5)",
+            "severity": "medium",
+            "data": {
+                "static_methods": 6,
+                "static_properties": 0
+            }
+        }
+    ],
+    "files_analyzed": 39
+}

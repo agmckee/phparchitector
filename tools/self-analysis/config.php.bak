@@ -1,0 +1,20 @@
+<?php return array (
+  'baseline_path' => '/home/alex/workspace/lossless-analysis/tools/self-analysis/baseline',
+  'target_path' => '/home/alex/workspace/lossless-analysis',
+  'excludes' => 
+  array (
+    0 => 'tests/',
+    1 => 'vendor/',
+    2 => 'tools/',
+  ),
+  'analyzers' => 
+  array (
+    0 => 'ClassAnalyzer',
+    1 => 'DependencyAnalyzer',
+    2 => 'PatternDetector',
+  ),
+  'output_dir' => '/tmp/test-reports',
+  'temp_dir' => '/home/alex/workspace/lossless-analysis/tools/self-analysis/temp',
+  'cleanup_temp' => true,
+  'verbosity' => 1,
+);

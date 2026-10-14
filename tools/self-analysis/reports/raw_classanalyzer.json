@@ -1,0 +1,1674 @@
+{
+    "files_analyzed": 39,
+    "classes": [
+        {
+            "namespace": "App\\Analyzer\\Dependency",
+            "class_name": "DependencyVisitor",
+            "extends": "AstVisitor",
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractFromFile",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "enter",
+                    "visibility": "protected",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "processClass",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "processInterface",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "processMembers",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "processMethod",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "processProperty",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "processTypeNode",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "processNodeForDependencies",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getDependencies",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getClasses",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [
+                {
+                    "name": "$resolver",
+                    "visibility": "private",
+                    "is_static": false
+                },
+                {
+                    "name": "$namespace",
+                    "visibility": "private",
+                    "is_static": false
+                },
+                {
+                    "name": "$useStatements",
+                    "visibility": "private",
+                    "is_static": false
+                },
+                {
+                    "name": "$currentNamespace",
+                    "visibility": "private",
+                    "is_static": false
+                },
+                {
+                    "name": "$dependencies",
+                    "visibility": "private",
+                    "is_static": false
+                },
+                {
+                    "name": "$classes",
+                    "visibility": "private",
+                    "is_static": false
+                }
+            ],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 329,
+            "fqcn": "App\\Analyzer\\Dependency\\DependencyVisitor",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/DependencyVisitor.php"
+        },
+        {
+            "namespace": "App\\Analyzer\\Dependency",
+            "class_name": "DependencyExtractor",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractFromFile",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractFromFileLegacy",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractClassWithDeps",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractInterfaceWithDeps",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractMemberDependencies",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractTypeDependencies",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractExpressionDependencies",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [
+                {
+                    "name": "$resolver",
+                    "visibility": "private",
+                    "is_static": false
+                }
+            ],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 372,
+            "fqcn": "App\\Analyzer\\Dependency\\DependencyExtractor",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/DependencyExtractor.php"
+        },
+        {
+            "namespace": "App\\Analyzer\\Dependency",
+            "class_name": "CircularDependencyDetector",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "findCircularDependencies",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "normalizeCycle",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "findCyclesDfs",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 147,
+            "fqcn": "App\\Analyzer\\Dependency\\CircularDependencyDetector",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/CircularDependencyDetector.php"
+        },
+        {
+            "namespace": "App\\Analyzer\\Dependency",
+            "class_name": "DependencyResolver",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "resolve",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "isPrimitiveType",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractClassName",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractNamespace",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractClassNameFromFqcn",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [
+                {
+                    "name": "PRIMITIVE_TYPES",
+                    "visibility": "private"
+                }
+            ],
+            "dependencies": [],
+            "lines_of_code": 129,
+            "fqcn": "App\\Analyzer\\Dependency\\DependencyResolver",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/DependencyResolver.php"
+        },
+        {
+            "namespace": "App\\Analyzer\\Dependency",
+            "class_name": "DependencyGraphBuilder",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "buildFromDirectory",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "buildFromFile",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [
+                {
+                    "name": "$extractor",
+                    "visibility": "private",
+                    "is_static": false
+                }
+            ],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 146,
+            "fqcn": "App\\Analyzer\\Dependency\\DependencyGraphBuilder",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Dependency\/DependencyGraphBuilder.php"
+        },
+        {
+            "namespace": "App\\Analyzer\\Pattern",
+            "class_name": "AntiPatternDetector",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "setConfig",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getConfig",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "detect",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [
+                {
+                    "name": "$config",
+                    "visibility": "private",
+                    "is_static": false
+                }
+            ],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 167,
+            "fqcn": "App\\Analyzer\\Pattern\\AntiPatternDetector",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/AntiPatternDetector.php"
+        },
+        {
+            "namespace": "App\\Analyzer\\Pattern",
+            "class_name": "ClassInfoExtractor",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "extract",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractClassMembers",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractMethodInfo",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractPropertyInfo",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "countInstantiations",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getVisibility",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 164,
+            "fqcn": "App\\Analyzer\\Pattern\\ClassInfoExtractor",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/ClassInfoExtractor.php"
+        },
+        {
+            "namespace": "App\\Analyzer\\Pattern",
+            "class_name": "LayerViolationDetector",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "detectLayerViolations",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractLayer",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 131,
+            "fqcn": "App\\Analyzer\\Pattern\\LayerViolationDetector",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/LayerViolationDetector.php"
+        },
+        {
+            "namespace": "App\\Analyzer\\Pattern",
+            "class_name": "DirectoryPatternAnalyzer",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "setPatternConfig",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getPatternConfig",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "analyzeDirectory",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "analyzeFile",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "detectDirectoryLevelPatterns",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [
+                {
+                    "name": "$classPatternAnalyzer",
+                    "visibility": "private",
+                    "is_static": false
+                },
+                {
+                    "name": "$layerViolationDetector",
+                    "visibility": "private",
+                    "is_static": false
+                }
+            ],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 156,
+            "fqcn": "App\\Analyzer\\Pattern\\DirectoryPatternAnalyzer",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/DirectoryPatternAnalyzer.php"
+        },
+        {
+            "namespace": "App\\Analyzer\\Pattern",
+            "class_name": "DesignPatternDetector",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "setPatternConfig",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getPatternConfig",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "detect",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "hasMethodsMatchingPattern",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [
+                {
+                    "name": "$patternConfig",
+                    "visibility": "private",
+                    "is_static": false
+                }
+            ],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 182,
+            "fqcn": "App\\Analyzer\\Pattern\\DesignPatternDetector",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/DesignPatternDetector.php"
+        },
+        {
+            "namespace": "App\\Analyzer\\Pattern",
+            "class_name": "ClassPatternAnalyzer",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "setPatternConfig",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getPatternConfig",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "analyzeClass",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [
+                {
+                    "name": "$extractor",
+                    "visibility": "private",
+                    "is_static": false
+                },
+                {
+                    "name": "$patternDetector",
+                    "visibility": "private",
+                    "is_static": false
+                },
+                {
+                    "name": "$antiPatternDetector",
+                    "visibility": "private",
+                    "is_static": false
+                }
+            ],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 81,
+            "fqcn": "App\\Analyzer\\Pattern\\ClassPatternAnalyzer",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/Pattern\/ClassPatternAnalyzer.php"
+        },
+        {
+            "namespace": "App\\Analyzer",
+            "class_name": "AbstractAnalyzer",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "parse",
+                    "visibility": "protected",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "parseFile",
+                    "visibility": "protected",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "findPhpFiles",
+                    "visibility": "protected",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getParser",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [
+                {
+                    "name": "$parser",
+                    "visibility": "protected",
+                    "is_static": false
+                }
+            ],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 73,
+            "fqcn": "App\\Analyzer\\AbstractAnalyzer",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/AbstractAnalyzer.php"
+        },
+        {
+            "namespace": "App\\Analyzer",
+            "class_name": "ClassInfoVisitor",
+            "extends": "AstVisitor",
+            "implements": [],
+            "methods": [
+                {
+                    "name": "extractFromFile",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "enter",
+                    "visibility": "protected",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractClassInfo",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractMethods",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractProperties",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractConstants",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getVisibility",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [
+                {
+                    "name": "$namespace",
+                    "visibility": "private",
+                    "is_static": false
+                },
+                {
+                    "name": "$classNode",
+                    "visibility": "private",
+                    "is_static": false
+                },
+                {
+                    "name": "$useStatements",
+                    "visibility": "private",
+                    "is_static": false
+                },
+                {
+                    "name": "$filePath",
+                    "visibility": "private",
+                    "is_static": false
+                }
+            ],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 238,
+            "fqcn": "App\\Analyzer\\ClassInfoVisitor",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/ClassInfoVisitor.php"
+        },
+        {
+            "namespace": "App\\Analyzer",
+            "class_name": "PatternDetector",
+            "extends": "AbstractAnalyzer",
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "setPatternConfig",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "analyzeDirectory",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "analyzeFile",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "analyzeClass",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "detectDirectoryLevelPatterns",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getPatternConfig",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [
+                {
+                    "name": "$dependencyAnalyzer",
+                    "visibility": "private",
+                    "is_static": false
+                },
+                {
+                    "name": "$directoryPatternAnalyzer",
+                    "visibility": "private",
+                    "is_static": false
+                }
+            ],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 171,
+            "fqcn": "App\\Analyzer\\PatternDetector",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/PatternDetector.php"
+        },
+        {
+            "namespace": "App\\Analyzer",
+            "class_name": "DependencyAnalyzer",
+            "extends": "AbstractAnalyzer",
+            "implements": [
+                "DependencyAnalyzerInterface"
+            ],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "analyze",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "analyzeFile",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "analyzeDirectory",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "buildGraph",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getDependencies",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "findCircularDependencies",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [
+                {
+                    "name": "$extractor",
+                    "visibility": "private",
+                    "is_static": false
+                },
+                {
+                    "name": "$graphBuilder",
+                    "visibility": "private",
+                    "is_static": false
+                },
+                {
+                    "name": "$circularDetector",
+                    "visibility": "private",
+                    "is_static": false
+                },
+                {
+                    "name": "$resolver",
+                    "visibility": "private",
+                    "is_static": false
+                }
+            ],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 142,
+            "fqcn": "App\\Analyzer\\DependencyAnalyzer",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/DependencyAnalyzer.php"
+        },
+        {
+            "namespace": "App\\Analyzer",
+            "class_name": "ClassAnalyzer",
+            "extends": "AbstractAnalyzer",
+            "implements": [
+                "AnalyzerInterface"
+            ],
+            "methods": [
+                {
+                    "name": "analyze",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "analyzeFile",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "analyzeDirectory",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "analyzeAsDto",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "analyzeFileAsDto",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractClassInfoFromFile",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractMethodsFromClass",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractPropertiesFromClass",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractConstantsFromClass",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractTypeFromTypeNode",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getVisibility",
+                    "visibility": "private",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 352,
+            "fqcn": "App\\Analyzer\\ClassAnalyzer",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Analyzer\/ClassAnalyzer.php"
+        },
+        {
+            "namespace": "App\\Model",
+            "class_name": "MethodInfo",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "toArray",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 47,
+            "fqcn": "App\\Model\\MethodInfo",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/MethodInfo.php"
+        },
+        {
+            "namespace": "App\\Model",
+            "class_name": "PatternThresholds",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "toArray",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 38,
+            "fqcn": "App\\Model\\PatternThresholds",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/PatternThresholds.php"
+        },
+        {
+            "namespace": "App\\Model\\Graph",
+            "class_name": "Node",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getId",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "toArray",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 43,
+            "fqcn": "App\\Model\\Graph\\Node",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/Graph\/Node.php"
+        },
+        {
+            "namespace": "App\\Model\\Graph",
+            "class_name": "DependencyGraph",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "addNode",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "addEdge",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "hasNode",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getNode",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getNodes",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getEdges",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getDependencies",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getDependents",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "toArray",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 138,
+            "fqcn": "App\\Model\\Graph\\DependencyGraph",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/Graph\/DependencyGraph.php"
+        },
+        {
+            "namespace": "App\\Model\\Graph",
+            "class_name": "Edge",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getId",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "toArray",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 45,
+            "fqcn": "App\\Model\\Graph\\Edge",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/Graph\/Edge.php"
+        },
+        {
+            "namespace": "App\\Model",
+            "class_name": "DependencyInfo",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "toArray",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 38,
+            "fqcn": "App\\Model\\DependencyInfo",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/DependencyInfo.php"
+        },
+        {
+            "namespace": "App\\Model",
+            "class_name": "LayerConfig",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "toArray",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 32,
+            "fqcn": "App\\Model\\LayerConfig",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/LayerConfig.php"
+        },
+        {
+            "namespace": "App\\Model",
+            "class_name": "PatternFinding",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "toArray",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 44,
+            "fqcn": "App\\Model\\PatternFinding",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/PatternFinding.php"
+        },
+        {
+            "namespace": "App\\Model",
+            "class_name": "ConstantInfo",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "toArray",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 32,
+            "fqcn": "App\\Model\\ConstantInfo",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/ConstantInfo.php"
+        },
+        {
+            "namespace": "App\\Model",
+            "class_name": "ClassInfo",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "toArray",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 59,
+            "fqcn": "App\\Model\\ClassInfo",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/ClassInfo.php"
+        },
+        {
+            "namespace": "App\\Model",
+            "class_name": "PatternConfig",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "default",
+                    "visibility": "public",
+                    "is_static": true,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "toArray",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 59,
+            "fqcn": "App\\Model\\PatternConfig",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/PatternConfig.php"
+        },
+        {
+            "namespace": "App\\Model",
+            "class_name": "PropertyInfo",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "__construct",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "toArray",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 38,
+            "fqcn": "App\\Model\\PropertyInfo",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Model\/PropertyInfo.php"
+        },
+        {
+            "namespace": "App\\Util",
+            "class_name": "AstVisitor",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "traverse",
+                    "visibility": "public",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "enter",
+                    "visibility": "protected",
+                    "is_static": false,
+                    "is_abstract": true,
+                    "is_final": false
+                },
+                {
+                    "name": "leave",
+                    "visibility": "protected",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "matches",
+                    "visibility": "protected",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "filterNodes",
+                    "visibility": "protected",
+                    "is_static": false,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 89,
+            "fqcn": "App\\Util\\AstVisitor",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/AstVisitor.php"
+        },
+        {
+            "namespace": "App\\Util",
+            "class_name": "UseStatementExtractor",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "extractFromStatements",
+                    "visibility": "public",
+                    "is_static": true,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractFromUseNode",
+                    "visibility": "public",
+                    "is_static": true,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractFromNamespace",
+                    "visibility": "public",
+                    "is_static": true,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractFromFile",
+                    "visibility": "public",
+                    "is_static": true,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getFqcnFromUseItem",
+                    "visibility": "private",
+                    "is_static": true,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getShortNameFromUseItem",
+                    "visibility": "private",
+                    "is_static": true,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 125,
+            "fqcn": "App\\Util\\UseStatementExtractor",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/UseStatementExtractor.php"
+        },
+        {
+            "namespace": "App\\Util",
+            "class_name": "CodeMetrics",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "countLinesOfCode",
+                    "visibility": "public",
+                    "is_static": true,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "countMethods",
+                    "visibility": "public",
+                    "is_static": true,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "countProperties",
+                    "visibility": "public",
+                    "is_static": true,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 74,
+            "fqcn": "App\\Util\\CodeMetrics",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/CodeMetrics.php"
+        },
+        {
+            "namespace": "App\\Util",
+            "class_name": "FqcnUtils",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "extractClassName",
+                    "visibility": "public",
+                    "is_static": true,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "extractNamespace",
+                    "visibility": "public",
+                    "is_static": true,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "isFullyQualified",
+                    "visibility": "public",
+                    "is_static": true,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "toFqcn",
+                    "visibility": "public",
+                    "is_static": true,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 61,
+            "fqcn": "App\\Util\\FqcnUtils",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/FqcnUtils.php"
+        },
+        {
+            "namespace": "App\\Util",
+            "class_name": "FileSystemUtils",
+            "extends": null,
+            "implements": [],
+            "methods": [
+                {
+                    "name": "findPhpFiles",
+                    "visibility": "public",
+                    "is_static": true,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "isDirectory",
+                    "visibility": "public",
+                    "is_static": true,
+                    "is_abstract": false,
+                    "is_final": false
+                },
+                {
+                    "name": "getRelativePath",
+                    "visibility": "public",
+                    "is_static": true,
+                    "is_abstract": false,
+                    "is_final": false
+                }
+            ],
+            "properties": [],
+            "constants": [],
+            "dependencies": [],
+            "lines_of_code": 64,
+            "fqcn": "App\\Util\\FileSystemUtils",
+            "file": "\/home\/alex\/workspace\/lossless-analysis\/src\/Util\/FileSystemUtils.php"
+        }
+    ]
+}
